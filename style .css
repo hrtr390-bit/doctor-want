@@ -3198,3 +3198,134 @@ html {
 /* ================= MOBILE ================= */
 @media (max-width: 900px) {
 }
+
+
+
+.faq-section{
+    padding:80px 20px;
+    background:#f8fbff;
+}
+
+.faq-container{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-container h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2rem;
+    color:#0f4c81;
+}
+
+.faq-item{
+    background:#fff;
+    margin-bottom:15px;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.faq-question{
+    width:100%;
+    border:none;
+    background:none;
+    padding:20px 25px;
+    cursor:pointer;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:1.1rem;
+    font-weight:600;
+    color:#1d3557;
+    text-align:right;
+}
+
+.faq-question span{
+    font-size:1.5rem;
+    transition:.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+}
+
+.faq-answer p{
+    padding:0 25px 20px;
+    line-height:1.8;
+    color:#555;
+}
+
+.faq-item.active .faq-answer{
+    max-height:200px;
+}
+
+.faq-item.active .faq-question span{
+    transform:rotate(45deg);
+}
+.branches-popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:9999;
+}
+
+.branches-popup.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.branches-box{
+    width:90%;
+    max-width:350px;
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+}
+
+.branches-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.branches-header h3{
+    margin:0;
+    color:#1d3557;
+}
+
+.branches-header button{
+    border:none;
+    background:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+.branch-link{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#1d3557;
+    background:#f5f7fa;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:10px;
+    transition:.3s;
+}
+
+.branch-link:hover{
+    background:#e8f2ff;
+}
+
+
+
