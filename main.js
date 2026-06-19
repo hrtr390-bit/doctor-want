@@ -572,3 +572,43 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach(el => {
     revealObserver.observe(el);
 });
+
+
+
+
+
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+        faqItems.forEach(el => {
+            if(el !== item){
+                el.classList.remove("active");
+            }
+        });
+
+        item.classList.toggle("active");
+    });
+});
+const openBranches = document.getElementById("openBranches");
+const branchesPopup = document.getElementById("branchesPopup");
+const closeBranches = document.getElementById("closeBranches");
+
+openBranches.addEventListener("click", (e) => {
+    e.preventDefault();
+    branchesPopup.classList.add("active");
+});
+
+closeBranches.addEventListener("click", () => {
+    branchesPopup.classList.remove("active");
+});
+
+branchesPopup.addEventListener("click", (e) => {
+    if (e.target === branchesPopup) {
+        branchesPopup.classList.remove("active");
+    }
+});
